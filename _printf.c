@@ -28,13 +28,12 @@ char c;
 char *str;
 
 va_list args;
-va_start(args,format);
+
 
 if (format == NULL)
 return (-1);
 
-
-
+va_start(args,format);
 while (format[i] != '\0')
 {
     
@@ -42,7 +41,8 @@ while (format[i] != '\0')
     {
     i++;   
     if (format[i] == '\0')
-    break;
+    va_end(args);
+    return (-1);
      if (format[i] == '%')
     {
     write(1, "%", 1);
