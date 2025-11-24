@@ -8,7 +8,8 @@ int _putstr(const char *txt)
 {
 int i = 0;
 int count = 0;
-
+if (!txt)
+txt = "(null)";
 while (txt[i] != '\0')
 {
     write(1,&txt[i],1);
