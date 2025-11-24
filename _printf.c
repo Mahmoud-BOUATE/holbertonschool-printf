@@ -34,6 +34,7 @@ return (-1);
 
 while (format[i] != '\0')
 {
+    count = 0;
     if (format[i] == '%')
     {
     count++;
