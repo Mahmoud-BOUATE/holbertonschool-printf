@@ -59,7 +59,6 @@ while (format[i] != '\0')
     
     else
     {
-    /* comportement simple pour un spec inconnu : afficher '%' puis le char */
     write(1, "%", 1);
     write(1, &format[i], 1);
     count += 2;
