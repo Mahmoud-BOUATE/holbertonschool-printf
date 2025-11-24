@@ -65,7 +65,7 @@ while (format[i] != '\0')
     write(1, &format[i], 1);
     count += 2;
     }
-    i++; /* on a consommé le caractère de format */
+    i++;
     continue;
     }
     
