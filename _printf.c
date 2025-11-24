@@ -41,8 +41,11 @@ while (format[i] != '\0')
     {
     i++;   
     if (format[i] == '\0')
+    {
     va_end(args);
     return (-1);
+    }
+    
      if (format[i] == '%')
     {
     write(1, "%", 1);
