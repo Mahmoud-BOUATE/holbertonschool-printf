@@ -37,6 +37,7 @@ while (format[i] != '\0')
 {
     if (format[i] == '%')
     {
+    count++;
     i++;   
     if (format[i] == '\0')
     break;
@@ -56,6 +57,7 @@ while (format[i] != '\0')
         str = va_arg(args, char *);
         count+= _putstr(str);
     }
+    
     else
     {
     /* comportement simple pour un spec inconnu : afficher '%' puis le char */
