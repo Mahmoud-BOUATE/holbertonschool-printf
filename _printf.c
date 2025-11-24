@@ -41,6 +41,7 @@ while (format[i] != '\0')
     {
     i++;   
     if (format[i] == '\0')
+    write(1,"%",1);
     break;
      if (format[i] == '%')
     {
