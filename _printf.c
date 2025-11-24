@@ -6,13 +6,14 @@
 */
 int _putstr(const char *txt)
 {
-int i, 
+int i = 0, 
 int count = 0;
 
 while (txt[i] != '\0')
 {
     write(1,&txt[i],1);
     i++;
+    count++;
 }
 return (count);
 }
@@ -38,7 +39,6 @@ while (format[i] != '\0')
     
     if (format[i] == '%')
     {
-    count++;
     i++;   
     if (format[i] == '\0')
     break;
