@@ -6,7 +6,8 @@
 */
 int _putstr(const char *txt)
 {
-int i, count;
+int i, 
+int count = 0;
 
 while (txt[i] != '\0')
 {
@@ -34,7 +35,7 @@ return (-1);
 
 while (format[i] != '\0')
 {
-    count = 0;
+    
     if (format[i] == '%')
     {
     count++;
