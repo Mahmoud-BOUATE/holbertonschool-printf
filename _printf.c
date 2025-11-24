@@ -11,7 +11,6 @@ int i, count;
 while (txt[i] != '\0')
 {
     write(1,&txt[i],1);
-    count++;
     i++;
 }
 return (count);
