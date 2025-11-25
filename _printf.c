@@ -26,15 +26,26 @@ return (count);
 /**
  *
  */
-int putsnbr(int n)
+char _putsnbr(int n)
 {
-	while (n > 0)
+	char c;
+
+	if (n < 0)
 	{
-		if (n <= 9)
-		{
-			write(1, &n, 1);
-		}
+		write(1, "-", 1);
+		n = -n;
 	}
+
+	if (n >= 10)
+	{
+		_putsnbr((n / 10));
+		write(1, &c, 1);
+	}
+
+	c = '0' + (n % 10);
+	write(1, &c, 1);
+
+	return (c);
 }
 /**
  * _printf - custom implementation of printf
@@ -46,7 +57,7 @@ int _printf(const char *format, ...)
 {
 int i = 0;
 int count = 0;
-int nbr = 0;
+int nbr;
 char c;
 char *str;
 
@@ -84,10 +95,15 @@ while (format[i] != '\0')
 			str = va_arg(args, char *);
 			count += _putstr(str);
 		}
-		else if (format[i] == 'i' || format[i] == 'd')
+		else if (format[i] == 'd')
 		{
 			nbr = va_arg(args, int);
-			count += putsnbr(nbr);
+			count += _putsnbr(nbr);
+		}
+		else if (format[i] == 'i')
+		{
+			nbr = va_arg(args, int);
+			count += _putsnbr(nbr);
 		}
 		else
 		{
@@ -106,10 +122,3 @@ va_end(args);
 return (count);
 }
 
-
-int main(void)
-{
-	int x = 8;
-	_printf("%d", x);
-	return (0);
-}
