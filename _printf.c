@@ -57,7 +57,7 @@ int _printf(const char *format, ...)
 {
 int i = 0;
 int count = 0;
-int nbr;
+int nbr, nbr1;
 char c;
 char *str;
 
@@ -102,8 +102,8 @@ while (format[i] != '\0')
 		}
 		else if (format[i] == 'i')
 		{
-			nbr = va_arg(args, int);
-			count += _putsnbr(nbr);
+			nbr1 = va_arg(args, int);
+			count += _putsnbr(nbr1);
 		}
 		else
 		{
@@ -121,4 +121,3 @@ while (format[i] != '\0')
 va_end(args);
 return (count);
 }
-
