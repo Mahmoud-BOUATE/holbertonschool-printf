@@ -22,6 +22,20 @@ int count = 0;
 	}
 return (count);
 }
+
+/**
+ *
+ */
+int putsnbr(int n)
+{
+	while (n > 0)
+	{
+		if (n <= 9)
+		{
+			write(1, &n, 1);
+		}
+	}
+}
 /**
  * _printf - custom implementation of printf
  * @format: format string
@@ -32,6 +46,7 @@ int _printf(const char *format, ...)
 {
 int i = 0;
 int count = 0;
+int nbr = 0;
 char c;
 char *str;
 
@@ -69,6 +84,11 @@ while (format[i] != '\0')
 			str = va_arg(args, char *);
 			count += _putstr(str);
 		}
+		else if (format[i] == 'i' || format[i] == 'd')
+		{
+			nbr = va_arg(args, int);
+			count += putsnbr(nbr);
+		}
 		else
 		{
 			write(1, "%", 1);
@@ -84,4 +104,12 @@ while (format[i] != '\0')
 }
 va_end(args);
 return (count);
+}
+
+
+int main(void)
+{
+	int x = 8;
+	_printf("%d", x);
+	return (0);
 }
