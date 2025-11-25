@@ -4,6 +4,6 @@
 
 int _putstr(const char *txt);
 int _printf(const char *format, ...);
-int _putsnbr(int n);
+int _putsnbr(long int n);
 
 #endif /* FUNCTION_PRINTF*/

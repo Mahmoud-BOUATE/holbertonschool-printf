@@ -26,7 +26,7 @@ return (count);
 /**
  *
  */
-int _putsnbr(int n)
+int _putsnbr(long int n)
 {
 	char c;
 	int count = 0;
@@ -37,16 +37,13 @@ int _putsnbr(int n)
 		n = -n;
 		count++;
 	}
-
 	if (n >= 10)
 	{
 		count += _putsnbr((n / 10));
 	}
-
 	c = '0' + (n % 10);
 	write(1, &c, 1);
 	count++;
-
 	return (count);
 }
 /**
@@ -123,3 +120,4 @@ while (format[i] != '\0')
 va_end(args);
 return (count);
 }
+
