@@ -26,26 +26,28 @@ return (count);
 /**
  *
  */
-char _putsnbr(int n)
+int _putsnbr(int n)
 {
 	char c;
+	int count = 0;
 
 	if (n < 0)
 	{
 		write(1, "-", 1);
 		n = -n;
+		count++;
 	}
 
 	if (n >= 10)
 	{
-		_putsnbr((n / 10));
-		write(1, &c, 1);
+		count += _putsnbr((n / 10));
 	}
 
 	c = '0' + (n % 10);
 	write(1, &c, 1);
+	count++;
 
-	return (c);
+	return (count);
 }
 /**
  * _printf - custom implementation of printf
