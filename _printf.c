@@ -71,11 +71,3 @@ while (format[i] != '\0')
 va_end(args);
 return (count);
 }
-
-int main(void)
-{
-	int x = -145;
-	int n = -9;
-
-	_printf("%c\n%s\n%i; %d\n", 'A', "je m'apelle groot", x, n);
-}
