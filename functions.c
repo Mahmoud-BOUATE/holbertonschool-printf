@@ -8,7 +8,6 @@
 int _putstr(const char *txt)
 {
 int i = 0;
-int count = 0;
 
 	if (!txt)
 		txt = "(null)";
@@ -17,7 +16,7 @@ int count = 0;
 		write(1, &txt[i], 1);
 		i++;
 	}
-return (i++);
+return (i);
 }
 /**
  * _putsnbr - helper function to print a number

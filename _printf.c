@@ -51,7 +51,7 @@ while (format[i] != '\0')
 		else if (format[i] == 'd' || format[i] == 'i')
 		{
 			nbr = va_arg(args, int);
-			count += _putsnbr(nbr);
+			count += _putsnbr((long int)nbr);
 		}
 		else
 		{
@@ -70,4 +70,12 @@ while (format[i] != '\0')
 }
 va_end(args);
 return (count);
+}
+
+int main(void)
+{
+	int x = -145;
+	int n = -9;
+
+	_printf("%c\n%s\n%i; %d\n", 'A', "je m'apelle groot", x, n);
 }
