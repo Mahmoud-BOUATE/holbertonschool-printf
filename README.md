@@ -49,16 +49,22 @@ Il gère plusieurs spécificateurs de format et repose uniquement sur l'appel sy
 
 ## Exemple d'utilisation :
 
+```c
 int main(void)
 {
     _printf("Character: %c\n", 'A');
     _printf("String: %s\n", "Hello");
     _printf("Integer: %d\n", 123);
     _printf("Percent: %%\n");
-    _printf("Hell %c" %d, 'o', 158);
+    _printf("Hell%c" %d, 'o', 158);
 
     return 0;
 }
+
+
+
+
+
 
 
 
