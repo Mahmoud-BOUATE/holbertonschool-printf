@@ -1,7 +1,5 @@
 #include <stdarg.h>
-#include <stddef.h>
 #include <unistd.h>
-#include <limits.h>
 #include "main.h"
 /**
  * _printf - custom implementation of printf
