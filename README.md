@@ -1,6 +1,6 @@
-Projet _printf.c
+# Projet _printf.c
 
-#Description
+## Description
 
 Ce projet consiste à recréer une version simplifiée de la fonction standard printf en C.
 Il gère plusieurs spécificateurs de format et repose uniquement sur l'appel système write().
@@ -20,43 +20,46 @@ La fonction _printf implémente les spécificateurs suivants :
 | %%               | Affiche un entier signé            |
 |:-----------------|:----------------------------------:|
 
-#Architecture du projet
+## Architecture du projet
 
 Le projet est composé de plusieurs fichiers principaux :
 
-##_printf.c
+### _printf.c
 
 - Fonction principale reconstituant le comportement de printf
 - Utilise va_list pour gérer les arguments variables
 - Redirige les différents formats vers des fonctions utilitaires
 
-##_putstr.c
+### function.s
+1- _putstr.c
 
 Fonction utilitaire permettant d’afficher une chaîne de caractères :
 - Affiche (null) si la chaîne est NULL
 - Retourne le nombre de caractères écrits
 
-##_putsnbr.c
+2- _putsnbr.c
 
 Fonction utilitaire permettant d’afficher un nombre entier :
 - Gère les nombres négatifs
 - Fonction récursive pour afficher chaque chiffre
 
-##main.h
+### main.h
 
 - Contient les prototypes utilisés dans le projet.
 
-#Exemple d'utilisation :
+## Exemple d'utilisation :
+
 int main(void)
 {
     _printf("Character: %c\n", 'A');
     _printf("String: %s\n", "Hello");
     _printf("Integer: %d\n", 123);
     _printf("Percent: %%\n");
-    _printf("cj)
+    _printf("Hell %c" %d, 'o', 158);
 
     return 0;
 }
+
 
 
 
