@@ -1,51 +1,8 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <unistd.h>
+#include <limits.h>
 #include "main.h"
-/**
- * _putstr - helper function to print a string
- * @txt: string to print
- * Return: number of characters printed
- */
-int _putstr(const char *txt)
-{
-int i = 0;
-int count = 0;
-
-	if (!txt)
-		txt = "(null)";
-	while (txt[i] != '\0')
-	{
-		write(1, &txt[i], 1);
-		i++;
-		count++;
-	}
-return (count);
-}
-
-/**
- *
- */
-int _putsnbr(long int n)
-{
-	char c;
-	int count = 0;
-
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		n = -n;
-		count++;
-	}
-	if (n >= 10)
-	{
-		count += _putsnbr((n / 10));
-	}
-	c = '0' + (n % 10);
-	write(1, &c, 1);
-	count++;
-	return (count);
-}
 /**
  * _printf - custom implementation of printf
  * @format: format string
@@ -54,11 +11,8 @@ int _putsnbr(long int n)
  */
 int _printf(const char *format, ...)
 {
-int i = 0;
-int count = 0;
-int nbr, nbr1;
-char c;
-char *str;
+int i = 0, count = 0, nbr;
+char c, *str;
 
 va_list args;
 
@@ -94,15 +48,10 @@ while (format[i] != '\0')
 			str = va_arg(args, char *);
 			count += _putstr(str);
 		}
-		else if (format[i] == 'd')
+		else if (format[i] == 'd' || format[i] == 'i')
 		{
 			nbr = va_arg(args, int);
 			count += _putsnbr(nbr);
-		}
-		else if (format[i] == 'i')
-		{
-			nbr1 = va_arg(args, int);
-			count += _putsnbr(nbr1);
 		}
 		else
 		{
@@ -111,13 +60,14 @@ while (format[i] != '\0')
 			count += 2;
 		}
 		i++;
-		continue;
 	}
-	write(1, &format[i], 1);
-	count++;
-	i++;
+	else
+	{
+		write(1, &format[i], 1);
+		count++;
+		i++;
+	}
 }
 va_end(args);
 return (count);
 }
-
