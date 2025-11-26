@@ -60,14 +60,22 @@ int main(void)
 
     return 0;
 }
+```
+# Compilation :
 
+**Compiler le projet avec :**
 
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
+## test :
 
-
-
-
-
-
-
-
+```c
+_printf("Test char: %c\n", 'X');
+_printf("Test string: %s\n", "Bonjour");
+_printf("Test integer: %d\n", -42);
+_printf("Testing percent: %%\n");
+_printf("Mixed: %s %c %d %%\n", "Test", 'A', 100);
+```
+# Auteur 
+Lucas Podevin
+mahmoud BOUATE
