@@ -77,5 +77,5 @@ _printf("Testing percent: %%\n");
 _printf("Mixed: %s %c %d %%\n", "Test", 'A', 100);
 ```
 # Auteur 
-Lucas Podevin
-mahmoud BOUATE
+-Lucas Podevin
+-mahmoud BOUATE
