@@ -2,7 +2,8 @@ Projet _printf.c
 
 #Description
 
-
+Ce projet consiste à recréer une version simplifiée de la fonction standard printf en C.
+Il gère plusieurs spécificateurs de format et repose uniquement sur l'appel système write().
 
 #Fonctionnalités
 
