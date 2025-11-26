@@ -17,7 +17,7 @@ Il gère plusieurs spécificateurs de format et repose uniquement sur l'appel sy
 |:-----------------|:----------------------------------:|
 | %d / %i          | Affiche un entier signé            |
 |:-----------------|:----------------------------------:|
-| %%               | Affiche un entier signé            |
+| %%               | Affiche le caractère %             |
 |:-----------------|:----------------------------------:|
 
 ## Architecture du projet
