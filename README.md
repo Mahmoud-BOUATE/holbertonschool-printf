@@ -1,13 +1,13 @@
-# Projet _printf.c
+<h1 align="center"># Projet _printf.c</h1>
 
 ## Description
 
 Ce projet consiste à recréer une version simplifiée de la fonction standard printf en C.
 Il gère plusieurs spécificateurs de format et repose uniquement sur l'appel système write().
 
-#Fonctionnalités
+## Fonctionnalités
 
-La fonction _printf implémente les spécificateurs suivants :
+**La fonction _printf implémente les spécificateurs suivants :**
 
 | spécificateur    | Description                        |
 |:-----------------|:----------------------------------:|
@@ -22,7 +22,7 @@ La fonction _printf implémente les spécificateurs suivants :
 
 ## Architecture du projet
 
-Le projet est composé de plusieurs fichiers principaux :
+**Le projet est composé de plusieurs fichiers principaux :**
 
 ### _printf.c
 
@@ -31,15 +31,15 @@ Le projet est composé de plusieurs fichiers principaux :
 - Redirige les différents formats vers des fonctions utilitaires
 
 ### function.s
-1- _putstr.c
+**1- _putstr.c**
 
-Fonction utilitaire permettant d’afficher une chaîne de caractères :
+**Fonction utilitaire permettant d’afficher une chaîne de caractères :**
 - Affiche (null) si la chaîne est NULL
 - Retourne le nombre de caractères écrits
 
-2- _putsnbr.c
+**2- _putsnbr.c**
 
-Fonction utilitaire permettant d’afficher un nombre entier :
+**Fonction utilitaire permettant d’afficher un nombre entier :**
 - Gère les nombres négatifs
 - Fonction récursive pour afficher chaque chiffre
 
