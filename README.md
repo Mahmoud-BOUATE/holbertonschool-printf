@@ -79,7 +79,7 @@ _printf("Mixed: %s %c %d %%\n", "Test", 'A', 100);
 
 ## Flowchart :
 
-![Flowchart](flowchart.png)
+![Flowchart](img/flowchart_printf.png)
 
 # Auteur 
 -Lucas Podevin
