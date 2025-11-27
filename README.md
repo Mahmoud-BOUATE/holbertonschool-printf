@@ -67,7 +67,7 @@ int main(void)
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
-## test :
+## Test :
 
 ```c
 _printf("Test char: %c\n", 'X');
@@ -76,6 +76,11 @@ _printf("Test integer: %d\n", -42);
 _printf("Testing percent: %%\n");
 _printf("Mixed: %s %c %d %%\n", "Test", 'A', 100);
 ```
+
+## Flowchart :
+
+![Flowchart](flowchart.png)
+
 # Auteur 
 -Lucas Podevin
 -mahmoud BOUATE
